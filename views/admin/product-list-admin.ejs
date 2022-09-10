@@ -1,0 +1,50 @@
+<%- include('../includes/head.ejs') %>
+<script src="/js/admin.js" defer></script>
+    <link rel="stylesheet" href="/css/product.css"></link>
+  </head>
+  <body>
+    <%- include('../includes/navigation.ejs'); %>
+    <main>
+        <% if (errorMessage) {  %>
+            <div class="user-message user-message--error"><%= errorMessage %></div>
+            <% } %>
+        <% if (prods.length > 0) { %>
+            <div class="grid">
+          <% for (let product of prods) {  %>
+                <div class="product__item">
+                <div class="hexagon">
+                <div class="hexagon image">
+                        <img src="/<%= product.imageUrl %>" alt="<%= product.title %>"></img>
+                </div>
+            </div>
+            <div class="product__box">
+          <header class="hexagon__header">
+              <h1 class="product__title">
+                <%= product.title %>
+            </h1>
+          </header>
+          <div class="hexagon__content">
+              <h2 class="product__price">
+                <sup>US$</sup><%= product.price %>
+            </h2>
+              <p class="product__description"><strong>Description:</strong>
+                <%= product.description %>
+            </p>
+          <div class="hexagon__actions">
+              <a class="btn" href="/admin/edit-product/<%= product._id %>?edit=true">Edit</a>
+                <input type="hidden" value="<%= csrfToken %>" name="_csrf"> 
+                <input type="hidden" name="id" value="<%= product._id %>"> 
+              <button class="btn" type="submit" onclick="showMessage('Delete a Product')">Delete</button>
+        </div>
+        </div>
+        </div>
+        </div>
+    <% } %>
+</div>
+<%- include ('../includes/pagination.ejs'); %>
+        <% } else { %>
+            <h1>No Products Found!</h1>
+            <% }  %>
+            <div id="dummy-message"></div>
+    </main>
+<%- include('../includes/end.ejs'); %>

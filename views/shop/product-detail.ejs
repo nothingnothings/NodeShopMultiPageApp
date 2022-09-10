@@ -1,0 +1,31 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/orders.css">
+  </head>
+  <body>
+    <%- include('../includes/navigation.ejs'); %>
+    <main>
+      <div class="order-board centered">
+        <div class="product-detail__controls">
+          <div class="product-detail__highlight">
+          <h1><%= product.title %></h1>
+          <div class="hexagon">
+            <div class="hexagon hexagon image">
+            <img src="/<%= product.imageUrl %>" alt="<%= product.title %>"></img>
+          </div>
+        </div>
+        <h3><%= product.description %></h3>
+          </div>
+          <div class="orders__item centered">
+            <div class="orders__item-lines product-detail">
+          <h2>US$ <%= product.price %></h2>
+          <form action="/cart" method="POST">
+            <button class="btn" type="submit">Add to Cart</button>
+            <input type="hidden" value="<%= csrfToken %>" name="_csrf"> 
+            <input type="hidden" name="productId" value="<%= product._id %>">
+          </form>
+        </div>
+        </div>
+      </div>
+        </div>
+    </main>
+<%- include('../includes/end.ejs'); %>

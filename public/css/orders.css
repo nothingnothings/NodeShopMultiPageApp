@@ -1,0 +1,172 @@
+.dummy-row {
+  height: 30vh;
+}
+
+.order-board {
+  margin-top: 7rem;
+}
+
+.order-board.centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 5rem;
+  margin-bottom: 3.4rem;
+}
+
+.product-detail__controls {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.product-detail__controls h3 {
+  text-align: center;
+}
+
+.product-detail__highlight {
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.product-detail__highlight h1 {
+  font-size: 4rem;
+}
+
+.orders {
+  list-style: none;
+  animation: slide-in 0.65s ease-in;
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato';
+}
+
+.orders__item {
+  margin-left: 2rem;
+  max-width: 70%;
+  background-color: var(--light-dark);
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: var(--white-highlight);
+  outline: 3px solid var(--lightest-green);
+  cursor: default;
+}
+
+.orders__item.centered {
+  margin-left: 0;
+  margin-bottom: 0;
+  max-width: 100%;
+}
+
+.orders__item-lines {
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+
+.orders__item-lines.product-detail {
+  margin-bottom: 1rem;
+  gap: 0.5rem;
+  display: flex;
+  padding: 0 8rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.orders__item-lines.product-detail h2 {
+  text-align: center;
+  line-break: unset;
+}
+
+.orders__item h2 {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  font-family: 'Lato';
+}
+
+.orders__products {
+  list-style: none;
+  font-family: 'Merryweather';
+  padding: 0;
+}
+
+.orders__products-item {
+  margin-left: 0.5rem;
+  color: var(--lightest-green);
+}
+
+.orders__products-item span {
+  color: var(--white-highlight);
+}
+
+.order__link {
+  margin-left: 0.7rem;
+  color: var(--lightest-green);
+}
+
+.order__link:hover {
+  text-decoration: none;
+}
+
+.order__number {
+  word-break: break-all;
+  font-family: 'Merryweather';
+}
+
+span {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 1200px) {
+  .orders__item {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 900px) {
+  .orders__item {
+    margin-left: 0;
+    align-items: center;
+  }
+
+  .orders__item-lines {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 540px) {
+  .orders__item-lines.product-detail {
+    padding: 0 4rem;
+  }
+}
+
+@media (max-width: 330px) {
+  .orders__item-lines.product-detail {
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 260px) {
+  .orders__item-lines.product-detail {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 230px) {
+  .orders__item-lines.product-detail {
+    padding: 0;
+  }
+}

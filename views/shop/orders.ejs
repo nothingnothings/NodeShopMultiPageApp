@@ -1,0 +1,57 @@
+<%- include('../includes/head.ejs') %>
+  <link rel="stylesheet" href="/css/product.css">
+  </link>
+  <link rel="stylesheet" href="/css/orders.css">
+  <link rel="stylesheet" href="/css/cart.css">
+  </link>
+  </head>
+  <body>
+    <%- include('../includes/navigation.ejs'); %>
+      <main>
+        <div class="order-board">
+        <% if (errorMessage) { %>
+          <div class="user-message user-message--error">
+            <%= errorMessage %>
+          </div>
+          <% } %>
+            <% if (orders.length <=0) { %>
+              <div class="wrapper">
+                <ul class="cart__item-list">
+                  <div class="no-product">
+                  <li class="no-product cart-item">
+                    <h2 style="font-family: 'Lato'">You haven't placed any orders yet.</h2>
+                  </li>
+                </div>
+                </ul>
+            </div>
+              <% } else { %>
+                <ul class="orders">
+                  <% orders.forEach(order=> { %>
+                    <li class="orders__item">
+                      <div class="orders__item-lines">
+                      <h1 class="order__number">Order #<%= order._id %>
+                      </h1>
+                      <ul class="orders__products">
+                        <% order.products.forEach(product=> { %>
+                          <li class="orders__products-item">
+                            <span>Product:</span>
+                            <%= product.product.title %> (<%= product.quantity %>)
+                                <p><span>Price:</span> $<%= product.product.price %>
+                                </p>
+                          </li>
+                          <% }) %>
+                          <li class="order__price">
+                            <h2 >Total Price: US$ <%= order.totalPrice.toFixed(2) %>
+                                </h2>
+                                <p><a class="order__link" href="/orders/<%= order._id %>">Invoice</a></p>
+                              </li>
+                      </ul>
+                    </div>
+                    </li>
+                    <% }) %>
+                </ul>
+                <% } %>
+              </div>
+      </main>
+      <div class="dummy-row"></div>
+      <%- include('../includes/end.ejs'); %>

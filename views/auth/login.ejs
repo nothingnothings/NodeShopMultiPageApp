@@ -1,0 +1,69 @@
+<%- include('../includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/auth.css">
+    <link rel="stylesheet" href="/css/cart.css">
+    <script src="/js/forms.js" defer></script>
+    </head>
+
+    <body>
+        <%- include('../includes/navigation.ejs'); %>
+            <main>
+                <div class="cart">
+                    <div class="wrapper">
+                        <ul class="cart__item-list">
+
+                    <div class="no-product" style="background-color: var(--lightest-green);">
+                        <li class="no-product cart-item">
+                
+                <% if (errorMessage) { %>
+                    <div class="user-message user-message--error">
+                        <%= errorMessage %>
+                    </div>
+                    <% } %>
+                        <form class="login-form" action="/login" method="POST">
+                            <input type="hidden" value="<%= csrfToken %>" name="_csrf">
+                            <div class="control">
+                                <label for="email">Email</label>
+                                <input 
+                                onkeyup="validate(this)"
+                                placeholder="exemplo@exemplo.com"
+                                type="email" 
+                                id="email"
+                                name="email" <% if (oldInput !==[]) { %>
+                                value="<%= oldInput.email %>"
+                                    <% } %>
+                                class="<%= validationErrors.find( (error)=> {
+                                            return error.param === 'email'
+                                            }
+                                            ) ? 'error' : '' %>"
+                                required
+                                >
+                            </div>
+                            <div class="control">
+                                <label for="password">Password</label>
+                                <input type="password"
+                                onkeyup="validate(this)"
+                                       placeholder="exemplo"
+                                       id="password"
+                                       required 
+                                       name="password" 
+                                       class="<%= validationErrors.find(
+                                                 (error) => {
+                        return error.param === 'password'}) ? 'error' : ''%>" <% if (oldInput !==[]) { %>
+                                       value="<%= oldInput.password %>"
+                                    <% } %>  
+                                       >
+                            </div>
+                            <div class="reset-password-link">
+                                <button  type="button" id="btn2" onclick="showMessage('Password Reset')">Forgot your password?</button>
+                            </div>
+                            <button class="btn" type="submit" id="btn" disabled>Login</button>
+                        </form>
+                    </li>
+                    </div>
+                        </ul>
+                    </div>
+                </div>
+            </main>
+            <div id="dummy-message"></div>
+            <div class="dummy-row"></div>
+            <%- include('../includes/end.ejs'); %>

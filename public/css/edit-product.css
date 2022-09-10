@@ -1,0 +1,53 @@
+input,
+textarea {
+  width: 58%;
+}
+
+input.blurred,
+textarea.blurred {
+  border: 3px solid var(--cyanest-green);
+  background-color: var(--light-dark);
+  color: var(--white-highlight);
+}
+
+input.blurred:invalid,
+textarea.blurred:invalid {
+  border: 3px solid var(--highlight-danger);
+}
+
+#output {
+  border: none;
+}
+
+label {
+  font-size: 13px;
+  text-align: right;
+  margin-right: 0.3rem;
+}
+
+.btn {
+  margin-left: 2.5rem;
+}
+
+.btn[disabled] {
+  background-color: var(--grey-grey) !important;
+  color: var(--white-highlight) !important;
+}
+.button-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.product-form {
+  margin: auto;
+  width: 15rem;
+}
+
+.dummy-row {
+  height: 6.5vh !important;
+}
+
+.product__box {
+  height: 20rem;
+}

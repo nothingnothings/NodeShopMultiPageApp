@@ -1,0 +1,24 @@
+<section class="pagination">
+  <% if ((currentPage !==1) && (previousPageNumber !==1)) { %>
+  <a href="<%= paginationPath %>/?page=1">1</a>
+  <% } %> <% if (currentPage> 3) { %>
+  <a href="" class="disabled">...</a>
+  <% } %> <% if (hasPreviousPage) { %>
+  <a href="<%= paginationPath %>/?page=<%= previousPageNumber %>"
+    ><%= previousPageNumber %></a
+  >
+  <% } %>
+  <a
+    href="<%= paginationPath %>/?page=<%= currentPage %>"
+    class="active disabled"
+    ><%= currentPage %></a
+  >
+  <% if (hasNextPage) { %>
+  <a href="<%= paginationPath %>/?page=<%= nextPageNumber %>"
+    ><%= nextPageNumber %></a
+  >
+  <% } %> <% if ((lastPage !==currentPage) && (nextPageNumber !==lastPage) ) {
+  %>
+  <a href="<%= paginationPath %>/?page=<%= lastPage %>"> <%= lastPage %> </a>
+  <% } %>
+</section>

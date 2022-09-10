@@ -1,0 +1,17 @@
+{
+    "configurations": [
+    
+        {   "type": "node",
+            "console": "integratedTerminal",
+            "request": "attach",
+            "name": "nodemon",
+            "runtimeExecutable": "nodemon",
+            "internalConsoleOptions": "neverOpen",
+            "program": "${workspaceFolder}/app.js",
+            "processId": "${command:PickProcess}",
+            "restart": true,
+            "protocol": "inspector"
+        }
+    ]
+    
+    }

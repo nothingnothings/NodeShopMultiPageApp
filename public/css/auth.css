@@ -1,0 +1,109 @@
+body {
+  display: block;
+}
+
+.login-form {
+  margin: auto;
+  margin-top: 4.5rem;
+  display: block;
+}
+
+.login-form input.blurred {
+  border: 3px solid var(--lightest-green);
+  background-color: var(--light-dark);
+  color: var(--white-highlight);
+}
+
+.login-form input.blurred:invalid {
+  border: 3px solid var(--highlight-danger);
+}
+
+.control {
+  margin-top: 0.05rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: baseline;
+}
+
+.dummy-row {
+  height: 11.8vh !important;
+}
+
+.signup {
+  margin-top: 3.1rem;
+}
+
+label {
+  display: inline-block;
+  width: 60px;
+  font-size: 14px;
+  text-align: right;
+}
+
+input,
+textarea {
+  border-radius: 5px;
+  width: 58%;
+  padding: 0;
+  color: var(--white-highlight);
+  background-color: var(--light-dark);
+  border: 3px solid var(--dark-green);
+}
+
+textarea {
+  resize: none;
+}
+
+input:active,
+input:focus,
+textarea:active,
+textarea:focus {
+  outline: none;
+  border: 3px solid var(--dark-green);
+  color: var(--white-highlight);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px var(--light-dark) inset !important;
+  box-shadow: 0 0 0 30px var(--light-dark) inset !important;
+  -webkit-text-fill-color: var(--light-grey) !important;
+}
+
+.reset-password-link {
+  margin-bottom: 1rem;
+  margin-top: -0.4rem;
+}
+
+.reset-password-link button {
+  background: transparent;
+  border: none;
+  color: var(--cyan-green);
+  font-size: 12px;
+}
+
+.reset-password-link button:hover,
+.reset-password-link button:focus {
+  color: var(--lightest-green);
+  outline: none;
+}
+
+.btn {
+  width: 60%;
+  margin-left: 0.7rem;
+}
+
+.btn[disabled] {
+  cursor: not-allowed !important;
+  background: var(--light-grey) !important;
+  color: var(--light-dark) !important;
+}
+
+@media (max-width: 420px) {
+  .btn {
+    margin-left: 0rem;
+  }
+}

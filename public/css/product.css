@@ -1,0 +1,169 @@
+.product__item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 30%;
+}
+
+.product__box {
+  background-color: rgb(92, 204, 17, 0.7);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  color: var(--darkest);
+  outline: 3px solid var(--darkest);
+  top: 115%;
+  bottom: 0px;
+  margin: auto;
+  z-index: 100;
+  max-width: 25rem;
+  min-width: 19rem;
+  min-height: 68%;
+  position: absolute;
+}
+
+.product__title {
+  font-weight: bold;
+  text-align: center;
+  opacity: 1;
+  cursor: default;
+}
+
+.product__price {
+  text-align: center;
+  outline: 2px var(--white-highlight) solid;
+  background-color: var(--white-highlight);
+  border-radius: 12px;
+  opacity: 1;
+  cursor: default;
+  display: flex;
+  justify-content: center;
+  font-family: 'Lato';
+}
+
+.product__price sup {
+  top: 1em;
+  font-size: 0.8rem;
+}
+
+.product__description {
+  cursor: default;
+  text-align: justify;
+}
+
+.product__description p {
+  font-family: 'Lato';
+}
+
+.product__description strong {
+  font-family: 'Roboto';
+}
+
+@media (min-width: 1800px) {
+  .product__item {
+    margin: 0 7rem;
+    height: 50%;
+    max-width: 18%;
+  }
+
+  .product__box {
+    top: 105%;
+  }
+}
+
+@media (max-width: 1800px) {
+  .product__box {
+    min-height: 75%;
+  }
+}
+
+@media (max-width: 1400px) {
+  .product__box {
+    min-height: 83%;
+  }
+}
+
+@media (max-width: 900px) {
+  .product__box {
+    min-height: 24rem;
+    min-width: 16rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .product__box {
+    width: 50vw;
+    top: 150%;
+  }
+}
+
+@media (max-width: 768px) and (min-height: 900px) {
+  .product__box {
+    top: 130%;
+  }
+}
+
+@media (max-width: 456.5px) {
+  .product__box {
+    width: 55vw;
+  }
+}
+
+@media (max-width: 415px) {
+  .product__box {
+    top: 145%;
+  }
+}
+
+@media (max-width: 415px) and (min-height: 900px) {
+  .product__box {
+    top: 125%;
+  }
+}
+
+@media (max-width: 356.5px) {
+  .product__box {
+    min-height: 24rem;
+  }
+
+  .product__price {
+    font-size: 1rem;
+  }
+
+  .product__price sup {
+    top: 0.5em;
+    font-size: 0.6rem;
+  }
+
+  .product__title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 300px) {
+  .product__title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 185px) {
+  .product__description strong {
+    font-size: 0.6rem;
+  }
+
+  .product__title {
+    font-size: 0.8rem;
+  }
+  .product__price {
+    font-size: 0.6rem;
+  }
+
+  .product__description {
+    font-size: 0.8rem;
+  }
+
+  .product__box {
+    min-height: 23rem;
+  }
+}

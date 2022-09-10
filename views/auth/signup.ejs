@@ -1,0 +1,80 @@
+<%- include('../includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/auth.css">
+    <link rel="stylesheet" href="/css/cart.css">
+    <script src="/js/forms.js" defer></script>
+    </head>
+    <body>
+        <%- include('../includes/navigation.ejs'); %>
+            <main>
+                <div class="cart">
+                    <div class="wrapper">
+                        <ul class="cart__item-list">
+                            <div class="no-product" style="background-color: var(--lightest-green)">
+                                <li class="no-product cart-item">
+                <% if (errorMessage) { %>
+                    <div class="user-message user-message--error">
+                        <%= errorMessage %>
+                    </div>
+                    <% } %>
+                        <form class="login-form signup" action="/dummy" method="POST">
+                            <input type="hidden" 
+                                   value="<%= 
+                                   csrfToken %>" 
+                                   name="_csrf">
+                            <div class="control">
+                                <label for="email">Email</label>
+                                <input required 
+                                placeholder="exemplo@exemplo.com"
+                                       type="email" 
+                                       onkeyup="validate(this)"
+                                       name="email" 
+                                       class="<%= validationErrors.find(
+                        (error) => {
+                              return error.param === 'email'
+                        }
+                    ) ? 'error' : '' %>" id="email" <% if (oldInput !==[]) { %>
+                                       value="<%= oldInput.email %>"
+                                    <% } %>
+                                        >
+                            </div>
+                            <div class="control">
+                                <label for="password">Password</label>
+                                <input type="password" 
+                                       placeholder="exemplo"
+                                       required 
+                                       onkeyup="validate(this)"
+                                       name="password" 
+                                       class="<%= validationErrors.find(
+                        (error) => { return error.param === 'password'}) ?  'error' : '' %>" 
+                                       id="password" <% if (oldInput !==[]) { %>
+                                       value="<%= oldInput.password %>"
+                                    <% } %>
+                                        >
+                            </div>
+                            <div class="control" style="align-items: flex-start">
+                                <label for="confirmPassword" style="font-size: 12px;">Confirm Password</label>
+                                <input type="password" 
+                                       placeholder="exemplo"
+                                       name="confirmPassword" 
+                                       onkeyup="validate(this)"
+                                       id="confirmPassword" 
+                                       required 
+                                       class="<%= validationErrors.find(
+
+                        (error) => {
+                               return error.param === 'confirmPassword'
+                        }
+                    ) ? 'error' : ''%>">
+                            </div>
+                            <button class="btn" style="margin-top: 0.5rem;" type="button" id="btn" onclick="showMessage('Sign Up')" disabled>Sign up</button>
+                        </form>
+                    </li>
+                    </div>
+                    </ul>
+                    </div>
+                    </div>
+            </main>
+            <div id="dummy-message"></div>
+            <div class="dummy-row"></div>
+      
+            <%- include('../includes/end.ejs'); %>

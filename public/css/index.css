@@ -1,0 +1,127 @@
+.grid {
+  margin-top: 2rem;
+}
+
+.landing-screen {
+  height: 19rem;
+}
+
+.static-svg {
+  width: 40%;
+}
+
+.n-logo {
+  stroke-width: 50 !important;
+  animation: dash 1.5s ease-in forwards;
+  stroke-dashoffset: 1;
+  stroke-dasharray: 1;
+}
+
+#svg14059 {
+  animation: fade-in-2 ease-out 1.8s forwards;
+  margin-top: 5rem;
+  width: 40rem;
+  height: 30rem;
+}
+
+.s-logo {
+  stroke-width: 22 !important;
+  animation: fade-in-3 ease-out 3.5s forwards;
+  animation: none;
+}
+
+#svg2 {
+  display: block;
+  position: relative;
+  height: 20.3rem;
+  left: 17.5rem;
+  bottom: 24.4rem;
+}
+
+.shop-message {
+  animation-name: fade-in-4;
+  animation-duration: 4.2s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  cursor: default;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16.3rem;
+}
+
+.shop-message h1 {
+  text-justify: center;
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+img {
+  border-style: none;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .grid {
+    margin-bottom: 14rem;
+  }
+
+  #svg14059 {
+    width: 15rem !important;
+  }
+
+  #svg2 {
+    width: 11.5rem !important;
+    height: 19.75rem !important;
+    left: 5.8rem !important;
+  }
+
+  .s-logo {
+    margin-right: 20rem;
+  }
+
+  .shop-message {
+    margin-bottom: 19.5rem;
+  }
+  .shop-message h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 250px) {
+  .grid {
+    margin-bottom: 8rem;
+  }
+
+  .landing-screen-svg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #svg14059 {
+    width: 8rem !important;
+  }
+
+  #svg2 {
+    width: 6.1rem !important;
+    height: 19.5rem !important;
+    left: 2.2rem !important;
+  }
+
+  .shop-message {
+    margin-bottom: 20rem;
+  }
+  .shop-message h1 {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,81 @@
+<%- include('../includes/head.ejs') %>
+    <script src="/js/admin.js" defer></script>
+    <link rel="stylesheet" href="/css/auth.css">
+    <link rel="stylesheet" href="/css/product.css">
+    <link rel="stylesheet" href="/css/edit-product.css">
+    </link>
+    </head>
+    <body>
+        <%- include('../includes/navigation.ejs') %>
+            <main>
+                <div class="grid">
+                                <% if (errorMessage) { %>
+                                    <div class="user-message user-message--error">
+                                        <%= errorMessage %>
+                                    </div>
+                                    <% } %>
+                                        <div class="product__item">
+                                            <div class="hexagon">
+
+                                                <div class="hexagon image">
+                                                    <img id="output" src="/images/NodeShopBlack.png"/>
+                                                </div>
+                                            </div>
+                                            <div class="product__box">
+                                            <form class="product-form"
+                                                action="/admin/<% if (editing) { %>edit-product<% } else { %>add-product<% } %>"
+                                                method="POST" enctype="multipart/form-data">
+                                                    <div class="control">
+                                                        <label for="image">Image</label>
+                                                        <input type="file" name="image" id="image"
+                                                            onchange="loadFile(event)">
+                                                    </div>
+                                                    <div class="control">
+                                                        <label for="title">Title</label>
+                                                        <input type="text" 
+                                                        required 
+                                                        placeholder="Product Title"
+                                                        name="title" 
+                                                        id="title"
+                                                        onkeyup="validate(this)"
+                                                            value="<% if(editing) { %><%= prod.title %><% } %>">
+                                                    </div>
+
+                                                    <div class="control">
+                                                        <label for="price">Price</label>
+                                                        <input type="number" 
+                                                        placeholder="Product Price"
+                                                        step=".01" 
+                                                        required 
+                                                        name="price" 
+                                                        id="price"
+                                                        onkeyup="validate(this)"
+                                                            value="<% if(editing) { %><%= prod.price %><% } %>">
+                                                    </div>
+                                                    <div class="control">
+                                                        <label for="description">Description</label>
+                                                        <textarea type="text" 
+                                                        required 
+                                                        rows="2" 
+                                                        placeholder="Your Description"
+                                                        name="description"
+                                                        onkeyup="validate(this)"
+                                                            id="description"><% if(editing) { %><%=prod.description%><% } %></textarea>
+                                                    </div>
+                                                    <% if (editing) { %>
+                                                        <input type="hidden" value="<%= prod._id %>" name="id" required>
+                                                        <% } %>
+                                                            <input type="hidden" value="<%= csrfToken %>" name="_csrf">
+                                                            <div class="button-wrapper">
+                                                            <button type="button" class="btn" disabled id="btn" onclick="showMessage('Add a Product')">
+                                                                <%= editing ? 'Edit Product' : 'Add Product' %>
+                                                            </button>
+                                                        </div>
+                                            </form>
+                                        </div>
+                                        </div>
+                </div>
+            </main>
+            <div id="dummy-message"></div>
+            <div class="dummy-row"></div>
+            <%- include('../includes/end.ejs'); %>
