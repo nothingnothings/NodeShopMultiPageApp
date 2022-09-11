@@ -29,7 +29,6 @@ body {
   background: var(--light-dark) !important;
   color: var(--white-highlight) !important;
   box-sizing: border-box !important;
-  /* font-family: 'Merriweather' !important; */
 }
 
 main {
