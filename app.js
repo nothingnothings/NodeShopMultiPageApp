@@ -140,10 +140,13 @@ app.use(authRoutes);
 app.get(errorController.error500);
 app.use(errorController.error404);
 
+
+const serverPort = 8080;
+
 mongoose
   .connect(MONGODB_URI)
   .then((_result) => {
-    app.listen(4000);
+    app.listen(process.env.PORT || serverPort);
   })
   .catch((err) => {
     console.log(err);
