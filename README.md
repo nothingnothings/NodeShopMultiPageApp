@@ -1,6 +1,6 @@
 <h1 align="center">NodeShop - Multi-Page Version - A Node.js-inspired online shop, built with Node.js (Express.js).</h1>
 <p align="center">
-  <img src="public/logo512.png" alt="NodeShop-logo" width="120px" height="120px"/>
+  <img src="public/android-chrome-512x512.png" alt="NodeShop-logo" width="120px" height="120px"/>
   <br>
   <i>This website is an example/demonstration of the sort of online shops that can be built 
     <br>with Node.js backends configured for traditional page serving (multiple html pages, templating engines such as EJS).</i>
