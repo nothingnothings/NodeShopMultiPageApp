@@ -72,7 +72,7 @@ main {
 
 .main-header__item a {
   text-decoration: none;
-  /* font-family: 'Lato'; */
+  font-family: 'Lato';
   font-weight: bold;
   color: var(--black-highlight);
 }
@@ -485,7 +485,6 @@ main {
   color: var(--white-highlight);
   margin-left: 1.1rem;
 }
-
 
 .mobile-nav__item .cart-link .cart-link-number {
   bottom: auto;
