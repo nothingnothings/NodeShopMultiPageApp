@@ -50,21 +50,124 @@ The backend of the app, as its name suggests, utilizes Node.js (with the Express
  
 ## Project Directory Structure
 
-The development environment (with the use of the `create-react-app` tool/workflow):
-
 
 ```
+.\
+│
+├── config\
+│   ├── keys.js
+│   └── prod.js
+│
+├── controllers\
+│   ├── admin.js
+│   ├── auth.js
+│   ├── error.js
+│   └── shop.js
+│
+├── faturas\
+│   ├── fatura-62e04d5c7ae0d991d83b1323.pdf
+│   ├── fatura-62e18ad75511c94e87929855.pdf
+│   ├── fatura-62e1a06e5511c94e87929fa4.pdf
+│   ├── fatura-62e1a1e05511c94e8792a071.pdf
+│   ├── fatura-62eb1fa9e4c7306961ced46b.pdf
+│   ├── fatura-62fd18d0d5b3ded6079d3e0d.pdf
+│   └── fatura-62fd9b7a3ff693a3cac15ac0.pdf
+│
+├── images\
+│   ├── 1658431838529-Bike.png
+│   ├── 1658432590831-Boat.png
+│   ├── 1658433107407-Pencil.png
+│   ├── 1658433305838-Skateboard.png
+│   ├── 1658433495040-keyboard.png
+│   ├── 1658434189280-A set of tires.png
+│   ├── 1658434649972-Boomerang.png
+│   ├── 1658435067043-Drums.png
+│   ├── 1658435608982-Violin.png
+│   ├── NodeShopBlack.png
+│   ├── android-chrome-192x192.png
+│   ├── android-chrome-512x512.png
+│   ├── apple-touch-icon.png
+│   ├── browserconfig.xml
+│   ├── favicon-16x16.png
+│   ├── favicon-32x32.png
+│   ├── favicon.ico
+│   ├── mstile-150x150.png
+│   └── site.webmanifest
+│
+├── middleware\
+│   └── isAuth.js
+│
+├── models\
+│   ├── order.js
+│   ├── product.js
+│   └── user.js
+│
+├── public\
+│   │
+│   ├── css\
+│   │   ├── auth.css
+│   │   ├── cart.css
+│   │   ├── edit-product.css
+│   │   ├── footer.css
+│   │   ├── index.css
+│   │   ├── main.css
+│   │   ├── orders.css
+│   │   └── product.css
+│   │
+│   └── js\
+│       ├── admin.js
+│       ├── forms.js
+│       └── main.js
+│
+│
+├── routes\
+│   ├── admin.js
+│   ├── auth.js
+│   └── shop.js
+│
+├── snapshot\
+│   ├── NodeShop1.png
+│   └── NodeShop2.png
+│
+├── util\
+│   └── path.js
+│
+├── views\
+│   │
+│   ├── admin\
+│   │   ├── edit-product.ejs
+│   │   └── product-list-admin.ejs
+│   │
+│   ├── auth\
+│   │   ├── login.ejs
+│   │   └── signup.ejs
+│   │
+│   ├── includes\
+│   │   ├── end.ejs
+│   │   ├── footer.ejs
+│   │   ├── head.ejs
+│   │   ├── navigation.ejs
+│   │   └── pagination.ejs
+│   │
+│   ├── shop\
+│   │   ├── cart.ejs
+│   │   ├── checkout.ejs
+│   │   ├── index.ejs
+│   │   ├── orders.ejs
+│   │   ├── product-detail.ejs
+│   │   └── product-list.ejs
+│   │
+│   ├── 404.ejs
+│   └── 500.ejs
+│
+├── .gitignore
+├── Procfile
+├── README.md
+├── app.js
+├── package-lock.json
+└── package.json
 
 ```
-
-
-The `create-react-app` workflow's production output, as shown in the `gh-pages` branch (tasked with the deployment of the app):
-
-
-```
-
-```
-
 
 
 
@@ -74,60 +177,34 @@ The package.json file used in the project:
 
 ```
 {
-  "name": "node-shop-rest-api",
-  "version": "0.2.0",
-  "private": true,
-  "homepage": "https://nothingnothings.github.io/NodeShopRestAPI",
-  "dependencies": {
-    "@fortawesome/free-regular-svg-icons": "^6.1.2",
-    "@fortawesome/free-solid-svg-icons": "^6.1.2",
-    "@fortawesome/react-fontawesome": "^0.2.0",
-    "@reduxjs/toolkit": "^1.8.3",
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/react-fontawesome": "^1.6.5",
-    "axios": "^0.27.2",
-    "bootstrap": "^5.2.0",
-    "font-awesome": "^4.7.0",
-    "react": "^18.2.0",
-    "react-bootstrap": "^2.4.0",
-    "react-dom": "^18.2.0",
-    "react-redux": "^8.0.2",
-    "react-router-dom": "^6.3.0",
-    "react-scripts": "5.0.1",
-    "react-stripe-checkout": "^2.6.3",
-    "redux": "^4.2.0",
-    "redux-thunk": "^2.4.1",
-    "web-vitals": "^2.1.4"
-  },
+  "name": "nodeshop-ejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "@types/react": "^18.0.15",
-    "gh-pages": "^4.0.0"
+    "font-awesome": "^4.7.0"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "connect-mongodb-session": "^3.1.1",
+    "csurf": "^1.11.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "express-validator": "^6.13.0",
+    "mongodb": "^4.1.3",
+    "mongoose": "^6.0.12",
+    "multer": "^1.4.3",
+    "pdfkit": "^0.13.0",
+    "stripe": "^8.191.0"
   }
 }
 ```
