@@ -2,7 +2,7 @@
 <header class="main-header">
   <button id="side-menu-toggle">
     <span class="toggle-button__bar"></span>
-    <span class="toggle-button__bar" style="height: 0.3rem;"></span>
+    <span class="toggle-button__bar" style="height :0.25rem;"></span>
     <span class="toggle-button__bar"></span>
   </button>
   <a
@@ -84,7 +84,7 @@
       <% } else { %>
       <li class="main-header__item">
         <a href="/cart" class="<%= path === '/cart' ? 'active' : '' %>">
-          <i class="fa fa-shopping-cart fa"> </i>
+          <i class="fa fa-shopping-cart"> </i>
           <div class="cart-link-number"><%= cartNumber %></div>
         </a>
       </li>
@@ -112,7 +112,7 @@
       style="order: 1"
     >
       <a href="/cart" class="cart-link <%= path === '/cart' ? 'active' : '' %>">
-        <i class="fa fa-shopping-cart fa"> </i>
+        <i class="fa fa-shopping-cart fa-2x"> </i>
         <div class="cart-link-number"><%= cartNumber %></div>
       </a>
     </li>
