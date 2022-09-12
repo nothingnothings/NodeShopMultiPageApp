@@ -78,11 +78,6 @@ main {
   color: var(--black-highlight);
 }
 
-.main-header__item button {
-  font-size: 1.1rem;
-  color: var(--black-highlight);
-}
-
 .main-header__item a:hover,
 .main-header__item a:active,
 .main-header__item a.active {
@@ -98,10 +93,10 @@ main {
   background-color: transparent;
   font-family: 'Lato';
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.1rem;
   border: none;
   cursor: pointer;
-  color: var(--white-highlight);
+  color: var(--black-highlight);
 }
 
 .main-header__item button:focus {
