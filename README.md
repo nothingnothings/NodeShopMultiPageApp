@@ -3,7 +3,7 @@
   <img src="images/android-chrome-512x512.png" alt="NodeShop-logo" width="120px" height="120px"/>
   <br>
   <i>This website is an example/demonstration of the sort of online shops that can be built 
-    <br>with Node.js backends configured for traditional page serving (multiple html pages, templating engines such as EJS).</i>
+    <br>with Node.js backends configured for traditional page serving (multiple HTML pages, templating engines such as EJS).</i>
   <br>
 </p>
 
