@@ -22,7 +22,7 @@
 
 ![NodeShop](snapshot/NodeShop2.png)
 
-A Multi-Page Application (multiple HTML files, page reloads) built without any JavaScript framework (Angular, ReactJS, Vue.js) The site's design, hexagon-inspired, was based on [Node.js's logo](https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg). Flexbox and media queries were used for the responsive design (attempting to cater to multiple device types, both desktop and mobile, with different resolutions). This app was also "translated" to a Single-Page, ReactJS version, which can be found [here](https://github.com/nothingnothings/NodeShopRestAPI).
+A Multi-Page Application (multiple HTML files, page reloads) built without any JavaScript framework (Angular, ReactJS, Vue.js) The site's design, hexagon-inspired, was based on [Node.js's logo](https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg). Flexbox and media queries were used for the responsive design (attempting to cater to multiple device types, both desktop and mobile, with different resolutions). The app was also "translated" to a Single-Page, ReactJS version, which can be found [here](https://github.com/nothingnothings/NodeShopRestAPI).
 
 For deployment, the chosen platform was Heroku, with its dynamic backend hosting capabilities (Node.js, Python, php, Go).
 
