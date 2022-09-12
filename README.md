@@ -232,7 +232,7 @@ To use this project, clone it using Git:
 - Communication of the served HTML pages with the Node.js (Express.js) backend, which manages the "User", "Product", "Order" and "Cart" objects, stored on a MongoDB database (MongoDB Atlas service); the Node.js server and MongoDB database also handle the authentication logic (login/signup) implemented on the app
 - Working "Shopping Cart" feature ("Add" and "Remove" products feature, with interactive "number of items" icon, implemented by the integration of the backend with the frontend, `res.render()` calls), created as a subdocument of the `user` objects stored in the mongoDB database
 - Simple pagination logic for the list of products
-- Simple Authentication, implemented with "express-session" (session-based authentication), "bcryptjs" and "connect-mongodb-session" (storage of sessions on noSQL database)
+- Simple authentication logic, implemented with "express-session" (session-based authentication), "bcryptjs" and "connect-mongodb-session" (storage of sessions on noSQL database)
 - Dummy representation of the possible integration of shop apps with Stripe
 - Viewing of each order's invoices/faturas in .pdf files, produced by the backend (`pdfkit` package)
 - Form validation logic with vanilla JavaScript
