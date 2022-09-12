@@ -130,7 +130,7 @@ main {
 .toggle-button__bar {
   width: 100%;
   height: 0.2rem;
-  background-color: var(--white-highlight);
+  background-color: var(--black-highlight);
   display: block;
   margin: 0.6rem 0;
 }
