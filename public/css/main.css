@@ -308,7 +308,7 @@ main {
   background: transparent;
   position: fixed;
   margin-top: 0.22rem;
-  color: var(--white-highlight);
+  color: var(--black-highlight);
   cursor: pointer;
   width: 3rem;
   padding-top: 0;
@@ -459,14 +459,14 @@ main {
 }
 
 .shop-link-2 {
-  color: var(--white-highlight);
+  color: var(--black-highlight);
   margin-left: 4rem;
   display: none;
 }
 
 .shop-link-2:hover,
 .shop-link-2.active {
-  color: var(--highlight-yellow);
+  color: var(--cyan-green);
   background: transparent;
 }
 
