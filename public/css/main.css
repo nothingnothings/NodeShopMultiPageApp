@@ -109,7 +109,7 @@ main {
   text-decoration: none;
   border: none;
   cursor: pointer;
-  color: var(--highlight-yellow);
+  color: var(--cyan-green);
 }
 
 #svg3 {
