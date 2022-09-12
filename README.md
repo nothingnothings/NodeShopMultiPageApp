@@ -22,9 +22,9 @@
 
 ![NodeShop](snapshot/NodeShop2.png)
 
-A Multi-Page Application (multiple HTML files, page reloads) built without any JavaScript framework (Angular, ReactJS, Vue.js). The site's design, hexagon-inspired, was based on [Node.js's logo](https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg). Flexbox and media queries were used for the responsive design (attempting to cater to multiple device types, both desktop and mobile, with different resolutions). The app was also "translated" to a Single-Page, ReactJS version, which can be found [here](https://github.com/nothingnothings/NodeShopRestAPI).
+A Multi-Page Application (multiple HTML files, page reloads) built without any JavaScript frontend framework (Angular, ReactJS, Vue.js). The site's design, hexagon-inspired, was based on [Node.js's logo](https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg). Flexbox and media queries were used for the responsive design (attempting to cater to multiple device types, both desktop and mobile, with different resolutions). The app was also "translated" to a Single-Page, ReactJS version, which can be found [here](https://github.com/nothingnothings/NodeShopRestAPI).
 
-For deployment, the chosen platform was Heroku, with its dynamic backend hosting capabilities (Node.js, Python, php, Go).
+For deployment, the chosen platform was Heroku, with its dynamic backend hosting capabilities (Node.js, Python, PHP, Go).
 
 The backend of the app, as its name suggests, utilizes Node.js (with the Express.js framework). The serverside code can be found on the `master` branch.
 
@@ -227,11 +227,12 @@ To use this project, clone it using Git:
 - Hexagon-inspired design, created with CSS
 - CSS-animated SVG logo on landing page
 - Responsive design (adaptive, mobile and desktop support) created with Flexbox and media queries
-- Usage of GitHub with Heroku. Upon the git push command, GitHub transfers the contents of the master branch into the Heroku project,  which then deploys the app at https://nodeshop-br-ejs.herokuapp.com/.
+- Usage of GitHub with Heroku. Upon the git push command, GitHub transfers the contents of the master branch into the Heroku project,  which then deploys the app at https://nodeshop-br-ejs.herokuapp.com.
 - For deployment demonstration purposes, only a single user is enabled/created on the serverside, with the credentials `exemplo@exemplo.com` (email field) and `exemplo` (password field). Creation of additional users (the "Sign Up" page) is possible in the complete app (in this demo app, the account creation endpoints are disabled). Furthermore, the "Orders" made by the user are reset every 60 minutes (MongoDB "Time to Live Index" feature), and the products added to the "Cart", every 8 hours (MongoDB "Scheduled Trigger" feature)
-- Working "Shopping Cart" feature ("Add" and "Remove" products feature, with interactive "number of items" icon), implemented with 
-- Simple pagination logic for the list of products
 - Communication of the served HTML pages with the Node.js (Express.js) backend, which manages the "User", "Product", "Order" and "Cart" objects, stored on a MongoDB database (MongoDB Atlas service); the Node.js server and MongoDB database also handle the authentication logic (login/signup) implemented on the app
+- Working "Shopping Cart" feature ("Add" and "Remove" products feature, with interactive "number of items" icon, implemented by the integration of the backend with the frontend, `res.render()` calls), created as a subdocument of the `user` objects stored in the mongoDB database
+- Simple pagination logic for the list of products
+- Simple Authentication, implemented with "express-session" (session-based authentication), "bcryptjs" and "connect-mongodb-session" (storage of sessions on noSQL database)
 - Dummy representation of the possible integration of shop apps with Stripe
 - Viewing of each order's invoices/faturas in .pdf files, produced by the backend (`pdfkit` package)
 - Form validation logic with vanilla JavaScript
