@@ -167,7 +167,7 @@ main {
   list-style: none;
   display: flex;
   flex-direction: column;
-  margin-top: 3rem;
+  margin-top: 2rem;
   padding: 0;
 }
 
@@ -489,7 +489,7 @@ main {
 
 .mobile-nav__item .cart-link .cart-link-number {
   bottom: auto;
-  top: 4.05rem;
+  top: 3rem;
   margin-left: 1.8rem;
   font-size: 1rem;
 }
