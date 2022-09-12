@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <a href="https://nothingnothings.github.io/NodeShopRestAPI"><strong>https://nodeshop-br-ejs.herokuapp.com</strong></a>
+  <a href="https://nodeshop-br-ejs.herokuapp.com"><strong>https://nodeshop-br-ejs.herokuapp.com</strong></a>
   <br>
 </p>
 
