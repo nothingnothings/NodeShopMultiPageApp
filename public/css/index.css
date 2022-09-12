@@ -100,7 +100,8 @@ img {
 
 @media (max-width: 250px) {
   .grid {
-    margin-bottom: 8rem;
+    margin-bottom: 6rem;
+    margin-top: -10rem;
   }
 
   .landing-screen-svg {
