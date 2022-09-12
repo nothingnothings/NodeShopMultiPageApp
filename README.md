@@ -22,12 +22,11 @@
 
 ![NodeShop](snapshot/NodeShop2.png)
 
-Frontend Single Page Application (SPA) built with the ReactJS (create-react-app) library. The site's design, hexagon-inspired, was based on [Node.js's logo](https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg). Flexbox and media queries were used for the responsive design (attempting to cater to multiple device types, both desktop and mobile, with different resolutions). As per React's latest versions, the app was made out of functional components, moving away from the class-based ("`class App extends React.Component{}`") component approach used in the past. 
+A Multi-Page Application (multiple HTML files, page reloads) built without any JavaScript framework (Angular, ReactJS, Vue.js) The site's design, hexagon-inspired, was based on [Node.js's logo](https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg). Flexbox and media queries were used for the responsive design (attempting to cater to multiple device types, both desktop and mobile, with different resolutions). This app was also "translated" to a Single-Page, ReactJS version, which can be found [here](https://github.com/nothingnothings/NodeShopRestAPI).
 
-The App was bootstrapped with `create-react-app` and deployed with `gh-pages`, assisted by the GitHub Actions feature.
-This app is also available as a "multi-page" app, without ReactJS. The project can be found [here](www.dummy.com).
+For deployment, the chosen platform was Heroku, with its dynamic backend hosting capabilities (Node.js, Python, php, Go).
 
-The backend of the app, as its name suggests, utilizes Node.js (with the Express.js framework) and is hosted on the Heroku platform. The serverside code can be found [here](dummy.com).
+The backend of the app, as its name suggests, utilizes Node.js (with the Express.js framework). The serverside code can be found on the `master` branch.
 
 
  
@@ -216,30 +215,27 @@ The package.json file used in the project:
 To use this project, clone it using Git:
 
 1. Run `git clone` to clone the project into your local Git repository
-2. Run `npm install` to install all dependencies (`react`, `axios`, etc)
-3. Run `npm run build` to create the production/deployment version of the app (outputted in `/build`)
-4. Serve the production files locally or on the web, with the help of a hosting provider (although great part of the app relies/depends on the backend's data, which in the case of this demo, is served by a Node.js (Express.js) server, hosted on Heroku)
+2. Run `npm install` to install all dependencies (`express`, `express-session`, `express-validator`,`bcryptjs`, `body-parser`, `mongodb`)
+3. Run `npm start` to spin up the node app
+4. Serve the production files locally (with packages like `nodemon`) or on the web, with the help of a hosting provider 
 5. For the purposes of this demo, on the "Get Started" (Authentication) page, input the credentials `exemplo@exemplo.com` (email) and `exemplo` (password) to access the apps's various features
 
 
 ## Features 
 
-- Single-Page Application, no page reloads, single HTML file (ReactJS)
-- Application divided into many components, of which some are used more than a single time, on different pages (ReactJS design philosophy)
+- Multi-Page Application, page reloads, multiple views handled by the EJS templating engine.
 - Hexagon-inspired design, created with CSS
 - CSS-animated SVG logo on landing page
 - Responsive design (adaptive, mobile and desktop support) created with Flexbox and media queries
-- Usage of GitHub Actions and GitHub Pages with the `create-react-app` utility for a seamless workflow (transition from development stage to production/deployment stage). Upon the git push command, GitHub Actions transfers the contents of the master branch into the gh-pages branch, which then deploys the app at https://nothingnothings.github.io/NodeShopRestAPI/.
+- Usage of GitHub with Heroku. Upon the git push command, GitHub transfers the contents of the master branch into the Heroku project,  which then deploys the app at https://nodeshop-br-ejs.herokuapp.com/.
 - For deployment demonstration purposes, only a single user is enabled/created on the serverside, with the credentials `exemplo@exemplo.com` (email field) and `exemplo` (password field). Creation of additional users (the "Sign Up" page) is possible in the complete app (in this demo app, the account creation endpoints are disabled). Furthermore, the "Orders" made by the user are reset every 60 minutes (MongoDB "Time to Live Index" feature), and the products added to the "Cart", every 8 hours (MongoDB "Scheduled Trigger" feature)
 - Working "Shopping Cart" feature ("Add" and "Remove" products feature, with interactive "number of items" icon), implemented with 
 - Simple pagination logic for the list of products
 - Communication of the served HTML pages with the Node.js (Express.js) backend, which manages the "User", "Product", "Order" and "Cart" objects, stored on a MongoDB database (MongoDB Atlas service); the Node.js server and MongoDB database also handle the authentication logic (login/signup) implemented on the app
 - Dummy representation of the possible integration of shop apps with Stripe
 - Viewing of each order's invoices/faturas in .pdf files, produced by the backend (`pdfkit` package)
-
 - Form validation logic with vanilla JavaScript
- - Traditional form submission approach ("button" element inside of a "form"; login data sent to `/login` endpoint on backend) and serverside "email" and "password" field validation (`express-validator` package, methods such as "isEmail()" and "isAlphanumeric()")
- - Responsive mobile design (sidebar, Flexbox, media queries)
+- Traditional form submission approach ("button" element inside of a "form"; login data sent to `/login` endpoint on backend) and serverside "email" and "password" field validation (`express-validator` package, methods such as "isEmail()" and "isAlphanumeric()")
 
 
 ## Inspiration
