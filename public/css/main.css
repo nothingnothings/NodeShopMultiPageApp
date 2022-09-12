@@ -497,7 +497,7 @@ main {
 .mobile-nav__item .cart-link:hover,
 .mobile-nav__item .cart-link:active {
   background-color: transparent;
-  color: var(--highlight-yellow);
+  color: var(--lightest-green);
 }
 
 .shop-cart:hover {
