@@ -3,7 +3,6 @@ const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
   resetToken: String,
-
   expiryDate: Date,
 
   email: {

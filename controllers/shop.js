@@ -1,24 +1,16 @@
-const Product = require('../models/product');
+const path = require('path');
+const fs = require('fs');
 
 const keys = require('../config/keys');
 
-const stripe = require('stripe')(
-  keys.stripeTestKey
-);
-
-const fs = require('fs');
-
+const stripe = require('stripe')(keys.stripeTestKey);
 const PDFDocument = require('pdfkit');
-
 const ObjectId = require('mongodb').ObjectId;
-
-const Order = require('../models/order');
-
 const { validationResult } = require('express-validator');
-
-const path = require('path');
-
 const pdfPath = path.join(__dirname, '..', 'faturas');
+
+const Product = require('../models/product');
+const Order = require('../models/order');
 
 const ITEMS_PER_PAGE = 3;
 

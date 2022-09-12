@@ -1,18 +1,16 @@
 {
-  "name": "NodeShopEJS",
+  "name": "nodeshop-ejs",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "debug": "nodemon --inspect app.js",
     "start": "node app.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "font-awesome": "^4.7.0",
-    "nodemon": "^2.0.14"
+    "font-awesome": "^4.7.0"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -32,8 +30,6 @@
     "nodemailer": "^6.7.0",
     "nodemailer-sendgrid-transport": "^0.2.0",
     "pdfkit": "^0.13.0",
-    "pug": "^3.0.2",
-    "sequelize": "^6.7.0",
     "stripe": "^8.191.0"
   }
 }
