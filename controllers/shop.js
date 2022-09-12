@@ -279,7 +279,6 @@ exports.getFatura = (req, res, _next) => {
 
         pdfDoc.pipe(fs.createWriteStream(invoicePath));
         pdfDoc.pipe(res);
-
         pdfDoc.fontSize(26).text('Fatura', {
           align: 'center',
         });
