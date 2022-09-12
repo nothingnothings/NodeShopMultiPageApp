@@ -9,9 +9,13 @@ const MongoDBStore = require('connect-mongodb-session')(session);
 const flash = require('connect-flash');
 const csrf = require('csurf');
 
+const keys = require('./config/keys');
 
-const MONGODB_URI =
-  'mongodb+srv://madblorga:papanacuas@cluster0.nhtjo.mongodb.net/shop?retryWrites=true&w=majority';
+
+const MONGODB_URI = keys.MONGODB_URI;
+
+
+  // 'mongodb+srv://madblorga:papanacuas@cluster0.nhtjo.mongodb.net/shop?retryWrites=true&w=majority';
 const store = new MongoDBStore({
   uri: MONGODB_URI,
   collection: 'sessions',
