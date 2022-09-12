@@ -36,10 +36,15 @@ The backend of the app, as its name suggests, utilizes Node.js (with the Express
  Some of the Languages and Libraries employed:
  
  - Node Package Manager (for bootstrapping and managing the Node.js/Express.js serverside App)
+ - Node.js
+ - Express.js
+ - EJS (templating engine used to dynamically serve the HTML/.ejs/view files to the user)
+ - MVC (Model-View-Controller) approach (view-serving)
  - HTML5 
  - CSS3 (animations, Flexbox, media queries)
+ - Vanilla JavaScript
  - Bootstrap (mainly for parts of the Footer component)
- - Heroku
+ - Heroku (dynamic backend hosting solution)
  - MongoDB (noSQL database storage solution; storage of user, product and order objects into collections in a remote MongoDB Atlas database)
  - Font Awesome
  
