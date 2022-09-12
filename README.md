@@ -40,8 +40,7 @@ The backend of the app, as its name suggests, utilizes Node.js (with the Express
  - CSS3 (animations, Flexbox, media queries)
  - Bootstrap (mainly for parts of the Footer component)
  - Heroku
- - MongoDB (noSQL database solution)
- 
+ - MongoDB (noSQL database storage solution; storage of user, product and order objects into collections in a remote MongoDB Atlas database)
  - Font Awesome
  
  
