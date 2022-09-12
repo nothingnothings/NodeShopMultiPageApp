@@ -242,4 +242,4 @@ To use this project, clone it using Git:
 
 ## Inspiration
 
-This app was based on the applications seen on the "NodeJS - The Complete Guide (MVC, REST APIs, GraphQL, Deno)" and "React - The Complete Guide (incl Hooks, React Router, Redux)" courses by Maximilian Schwarzmüller.
+This app was based on the applications seen on the "NodeJS - The Complete Guide (MVC, REST APIs, GraphQL, Deno)" course by Maximilian Schwarzmüller.
