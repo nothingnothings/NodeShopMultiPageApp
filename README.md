@@ -35,17 +35,14 @@ The backend of the app, as its name suggests, utilizes Node.js (with the Express
  
  Some of the Languages and Libraries employed:
  
- - Node Package Manager (for bootstrapping and managing the React App)
+ - Node Package Manager (for bootstrapping and managing the Node.js/Express.js serverside App)
  - HTML5 
  - CSS3 (animations, Flexbox, media queries)
- - ReactJS (JavaScript Library, app built entirely of React components)
- - React Router (for the navigation between the different "pages" of the app)
- - React Redux approach for managing state (global state split between 4 reducers: `auth`, `orders`, `cart` and `shop`)
  - Bootstrap (mainly for parts of the Footer component)
- - Form validation logic using the `useState` Hook, as seen in the 'Get Started' and 'Add a Product' pages.
+ - Form validation logic with vanilla JavaScript
+ - Traditional form submission approach ("button" element inside of a "form"; login data sent to `/login` endpoint on backend) and serverside "email" and "password" field validation (`express-validator` package, methods such as "isEmail()" and "isAlphanumeric()")
  - Responsive mobile design (sidebar, Flexbox, media queries)
  - Font Awesome
- - Axios (for the communication, requests and responses, between the frontend app and the Node.js/express.js backend targeted by it)
  
  
 ## Project Directory Structure
