@@ -72,7 +72,8 @@ img {
 
 @media (max-width: 500px) {
   .grid {
-    margin-bottom: 14rem;
+    margin-bottom: 10rem;
+    margin-top: -6rem;
   }
 
   #svg14059 {
