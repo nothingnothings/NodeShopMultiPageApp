@@ -509,7 +509,7 @@ main {
 }
 
 .cart-link.active {
-  color: var(--highlight-yellow);
+  color: var(--lightest-green);
 }
 
 @media (max-width: 769px) {
