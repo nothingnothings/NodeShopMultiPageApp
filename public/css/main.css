@@ -24,6 +24,8 @@ html {
 
 body {
   height: 100%;
+  font-family: inherit;
+  --bs-font-sans-serif: inherit;
   margin: 0;
   padding: 0;
   background: var(--light-dark) !important;
