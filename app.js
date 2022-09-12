@@ -11,27 +11,20 @@ const csrf = require('csurf');
 
 const keys = require('./config/keys');
 
-
 const MONGODB_URI = keys.MONGODB_URI;
 
-
-  // 'mongodb+srv://madblorga:papanacuas@cluster0.nhtjo.mongodb.net/shop?retryWrites=true&w=majority';
 const store = new MongoDBStore({
   uri: MONGODB_URI,
   collection: 'sessions',
 });
 
-
 const csrfProtection = csrf();
-
 
 const errorController = require('./controllers/error');
 const shopController = require('./controllers/shop');
 const isAuth = require('./middleware/isAuth');
 
-
 const User = require('./models/user');
-
 
 const fileStorage = multer.diskStorage({
   destination: (_req, _file, cb) => {
@@ -60,7 +53,6 @@ app.set('views', 'views');
 const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 const authRoutes = require('./routes/auth');
-
 
 const upload = multer({
   storage: fileStorage,
@@ -94,8 +86,7 @@ app.use((req, res, next) => {
 
 app.use(
   session({
-    secret: 'asjosaoasjoasjoghihninknxcknklnknlk',
-
+    secret: keys.sessionSecret,
     resave: false,
     saveUninitialized: false,
     store: store,
@@ -143,7 +134,6 @@ app.use(authRoutes);
 
 app.get(errorController.error500);
 app.use(errorController.error404);
-
 
 const serverPort = 8080;
 

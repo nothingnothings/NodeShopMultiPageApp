@@ -1,7 +1,9 @@
 const Product = require('../models/product');
 
+const keys = require('../config/keys');
+
 const stripe = require('stripe')(
-  'sk_test_51JzRu5CmbCw1fMfwoGYpGL1UxowTNGxpiFigIrmYjprkWQj6rk9wAVl1oIGGnG4kyhAFJEtd0VQqVMpPkbrQUNeb00B11Axm7L'
+  keys.stripeTestKey
 );
 
 const fs = require('fs');
