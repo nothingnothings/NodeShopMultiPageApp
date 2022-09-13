@@ -98,18 +98,15 @@
   }
 }
 
-
-
 @media (max-width: 768px) and (max-height: 600px) {
   .product__box {
-    width: 50vw;
     top: 175%;
   }
 }
 
 @media (max-width: 768px) and (min-height: 900px) {
   .product__box {
-    top: 130%;
+    top: 130% !important;
   }
 }
 
