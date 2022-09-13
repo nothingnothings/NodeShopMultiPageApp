@@ -1,4 +1,4 @@
-<h1 align="center">NodeShop - Multi-Page Version - A Node.js-inspired online shop, built with Node.js (Express.js).</h1>
+<h1 align="center">NodeShop - Multi-Page Version - A Node.js-inspired online shop, built with Node.js (Express.js)</h1>
 <p align="center">
   <img src="images/android-chrome-512x512.png" alt="NodeShop-logo" width="120px" height="120px"/>
   <br>
@@ -50,6 +50,7 @@ The backend of the app, as its name suggests, utilizes Node.js (with the Express
  
 ## Project Directory Structure
 
+The backend's directory structure, following the MVC (Model-View-Controller) pattern:
 
 ```
 .\
@@ -235,8 +236,9 @@ To use this project, clone it using Git:
 - Simple authentication logic, implemented with "express-session" (session-based authentication), "bcryptjs" and "connect-mongodb-session" (storage of sessions on noSQL database)
 - Dummy representation of the possible integration of shop apps with Stripe
 - Viewing of each order's invoices/faturas in .pdf files, produced by the backend (`pdfkit` package)
-- Form validation logic with vanilla JavaScript
-- Traditional form submission approach ("button" element inside of a "form"; login data sent to `/login` endpoint on backend) and serverside "email" and "password" field validation (`express-validator` package, methods such as "isEmail()" and "isAlphanumeric()")
+- Frontend form validation logic, with vanilla JavaScript
+- Traditional form submission approach ("button" element inside of a "form"; login data sent, as "POST" request, to `/login` endpoint on backend) and serverside "email" and "password" field validation (`express-validator` package, methods such as "isEmail()" and "isAlphanumeric()")
+- Font Awesome and Bootstrap usage (in the footer of the page)
 
 
 ## Inspiration
