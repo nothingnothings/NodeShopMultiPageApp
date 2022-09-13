@@ -100,7 +100,7 @@
 
 
 
-@media (max-width: 768px) and (max-height: 550px) {
+@media (max-width: 768px) and (max-height: 600px) {
   .product__box {
     width: 50vw;
     top: 175%;
