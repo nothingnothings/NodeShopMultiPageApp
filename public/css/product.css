@@ -116,7 +116,7 @@
   }
 }
 
-@media (max-width: 415px) {
+@media (max-width: 415px) and (min-height: 601px) {
   .product__box {
     top: 145%;
   }
