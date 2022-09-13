@@ -238,7 +238,7 @@ To use this project, clone it using Git:
 - Viewing of each order's invoices/faturas in .pdf files, produced by the backend (`pdfkit` package)
 - Frontend form validation logic, with vanilla JavaScript
 - Traditional form submission approach ("button" element inside of a "form"; login data sent, as "POST" request, to `/login` endpoint on backend) and serverside "email" and "password" field validation (`express-validator` package, methods such as "isEmail()" and "isAlphanumeric()")
-- Font Awesome and Bootstrap usage (on Footer)
+- Font Awesome and Bootstrap usage (in the footer of the page)
 
 
 ## Inspiration
