@@ -50,6 +50,7 @@ The backend of the app, as its name suggests, utilizes Node.js (with the Express
  
 ## Project Directory Structure
 
+The backend's directory structure, following the MVC (Model-View-Controller) pattern:
 
 ```
 .\
