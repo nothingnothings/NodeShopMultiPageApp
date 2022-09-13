@@ -1,4 +1,4 @@
-<h1 align="center">NodeShop - Multi-Page Version - A Node.js-inspired online shop, built with Node.js (Express.js).</h1>
+<h1 align="center">NodeShop - Multi-Page Version - A Node.js-inspired online shop, built with Node.js (Express.js)</h1>
 <p align="center">
   <img src="images/android-chrome-512x512.png" alt="NodeShop-logo" width="120px" height="120px"/>
   <br>
