@@ -239,6 +239,7 @@ To use this project, clone it using Git:
 - Frontend form validation logic, with vanilla JavaScript
 - Traditional form submission approach ("button" element inside of a "form"; login data sent, as "POST" request, to `/login` endpoint on backend) and serverside "email" and "password" field validation (`express-validator` package, methods such as "isEmail()" and "isAlphanumeric()")
 - Font Awesome and Bootstrap usage (in the footer of the page)
+- Custom favicon, compatible with multiple devices
 
 
 ## Inspiration
