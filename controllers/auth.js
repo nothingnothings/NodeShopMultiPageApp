@@ -4,7 +4,7 @@ const { validationResult } = require('express-validator');
 
 const User = require('../models/user');
 
-exports.getLoginPage = (req, res, _next) => {
+exports.getLoginPage = (req, res) => {
   let message = req.flash('error');
 
   if (message.length > 0) {
