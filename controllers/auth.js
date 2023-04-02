@@ -95,7 +95,7 @@ exports.postLogout = (req, res, _next) => {
   });
 };
 
-exports.getSignupPage = (req, res, _next) => {
+exports.getSignupPage = (req, res) => {
   let message = req.flash('error');
 
   if (message.length > 0) {
