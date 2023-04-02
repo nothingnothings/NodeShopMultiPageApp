@@ -141,7 +141,7 @@ const serverPort = 8080;
 
 mongoose
   .connect(MONGODB_URI)
-  .then((_result) => {
+  .then(() => {
     app.listen(process.env.PORT || serverPort);
   })
   .catch((err) => {
