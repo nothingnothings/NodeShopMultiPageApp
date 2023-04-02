@@ -59,7 +59,7 @@ exports.postLogin = (req, res, next) => {
             if (result) {
               req.session.isLoggedIn = true;
               req.session.user = user;
-              return req.session.save((_err) => {
+              return req.session.save(() => {
                 res.redirect('/');
               });
             } else {
