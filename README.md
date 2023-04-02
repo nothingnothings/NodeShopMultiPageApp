@@ -28,6 +28,9 @@ For deployment, the chosen platform was Heroku, with its dynamic backend hosting
 
 The backend of the app, as its name suggests, utilizes Node.js (with the Express.js framework). The serverside code can be found on the `master` branch.
 
+![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/nothingnothings/NodeShopMultiPageApp/master?style=flat-square)
+[![HitCount](https://hits.dwyl.com/nothingnothings/NodeShopMultiPageApp.svg?style=flat-square)](http://hits.dwyl.com/nothingnothings/NodeShopMultiPageApp)
+
 
  
 ## Technologies 
