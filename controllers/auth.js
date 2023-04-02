@@ -89,7 +89,7 @@ exports.postLogin = (req, res, next) => {
     });
 };
 
-exports.postLogout = (req, res, _next) => {
+exports.postLogout = (req, res) => {
   req.session.destroy(() => {
     res.redirect('/');
   });
