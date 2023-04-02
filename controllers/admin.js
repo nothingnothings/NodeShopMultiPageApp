@@ -4,7 +4,7 @@ const { validationResult } = require('express-validator');
 
 const ITEMS_PER_PAGE = 3;
 
-exports.getAddProductPage = (req, res, _next) => {
+exports.getAddProductPage = (req, res) => {
   const editMode = req.query.edit;
 
   const errors = validationResult(req);
