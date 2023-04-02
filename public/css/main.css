@@ -215,7 +215,7 @@ main {
   background-color: transparent;
   color: var(--white-highlight);
   font-size: 1.5rem;
-  padding: 1rem 1rem;
+  padding: 1rem;
 }
 
 .mobile-nav__item button:hover {
