@@ -20,7 +20,7 @@ router.post(
     check('email')
       .isEmail()
       .withMessage('Please enter a valid email')
-      .custom((value, { _req }) => {
+      .custom((value) => {
         return User.findOne({ email: value }).then((user) => {
           if (!user) {
             return Promise.reject(
