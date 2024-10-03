@@ -31,8 +31,8 @@ O backend do aplicativo, como seu nome sugere, utiliza Node.js (com o framework 
 
 
 ![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/nothingnothings/NodeShopMultiPageApp/master?style=flat-square)
-[![en](https://img.shields.io/badge/lang-en-red.svg?style=flat-square)](https://github.com/nothingnothings/NodeShopRestAPIBackend)
-[![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg?style=flat-square)](https://github.com/nothingnothings/NodeShopRestAPIBackend/blob/master/README.pt-br.md)
+[![en](https://img.shields.io/badge/lang-en-red.svg?style=flat-square)](https://github.com/nothingnothings/NodeShopMultiPageApp)
+[![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg?style=flat-square)](https://github.com/nothingnothings/NodeShopMultiPageApp/blob/master/README.pt-br.md)
 
  
 ## Tecnologias 
