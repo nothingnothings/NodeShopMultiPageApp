@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <a href="https://nodeshop-br-ejs.herokuapp.com"><strong>https://nodeshop-br-ejs.herokuapp.com</strong></a>
+  <a href="https://web-production-fda2.up.railway.app"><strong>https://web-production-fda2.up.railway.app</strong></a>
   <br>
 </p>
 
@@ -25,7 +25,7 @@
 Uma Aplicação Multi-Página (vários arquivos HTML, recargas de página) construída sem nenhum framework frontend JavaScript (Angular, ReactJS, Vue.js). O design do site, inspirado em hexágonos, foi baseado no [logotipo do Node.js](https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg). Flexbox e media queries foram usados para o design responsivo (tentando atender a múltiplos tipos de dispositivos, tanto desktop quanto mobile, com diferentes resoluções). O aplicativo também foi "traduzido" para uma versão de Página Única, ReactJS, que pode ser encontrada [aqui](https://github.com/nothingnothings/NodeShopRestAPI).
 
 
-Para o deployment, a plataforma escolhida foi o Heroku, com suas capacidades dinâmicas de hospedagem de backend (Node.js, Python, PHP, Go).
+Para o deployment, a plataforma escolhida foi o Railway, com suas capacidades dinâmicas de hospedagem de backend (Node.js, Python, PHP, Go).
 
 O backend do aplicativo, como seu nome sugere, utiliza Node.js (com o framework Express.js). O código serverside pode ser encontrado na branch `master`.
 
@@ -48,7 +48,7 @@ Algumas das linguagens e bibliotecas empregadas:
  - CSS3 (animações, Flexbox, media queries)
  - Vanilla JavaScript
  - Bootstrap (principalmente para partes do componente Footer)
- - Heroku (solução de hospedagem de backend dinâmico)
+ - Railway (solução de hospedagem de backend dinâmico)
  - MongoDB (solução de armazenamento de banco de dados noSQL; armazenamento de objetos de usuário, produto e pedido em coleções em um banco de dados remoto MongoDB Atlas)
  - Utilização da biblioteca Font Awesome
  
@@ -233,7 +233,7 @@ Para usar este projeto, clone-o usando o Git:
 - Design inspirado em hexágonos, criado com CSS.
 - Logotipo SVG animado em CSS na página inicial.
 - Design responsivo (adaptável, suporte a dispositivos móveis e desktop) criado com Flexbox e media queries.
-- Uso do GitHub com Heroku. Ao executar o comando git push, o GitHub transfere o conteúdo da branch master para o projeto Heroku, que então implanta o aplicativo em https://nodeshop-br-ejs.herokuapp.com.
+- Uso do GitHub com Railway. Ao executar o comando git push, o GitHub transfere o conteúdo da branch master para o projeto Railway, que então implanta o aplicativo em https://web-production-fda2.up.railway.app.
 - Para fins de demonstração de deploy, apenas um único usuário é habilitado/criado no lado do servidor, com as credenciais exemplo@exemplo.com (campo de email) e exemplo (campo de senha). A criação de usuários adicionais ("Sem conta? Junte-se ao NodeShop") é possível no aplicativo completo (neste aplicativo de demonstração, os endpoints de criação de conta estão desativados). Além disso, as "Orders" feitas pelo usuário são redefinidas a cada 60 minutos (recurso Time to Live Index, do MongoDB), e os produtos adicionados ao "Cart", a cada 8 horas (recurso de "Scheduled Trigger" do MongoDB)
 - Comunicação das páginas HTML servidas com o backend Node.js (Express.js), que gerencia os objetos "Usuário", "Produto", "Pedido" e "Carrinho", armazenados em um banco de dados MongoDB (serviço MongoDB Atlas); o servidor Node.js e o banco de dados MongoDB também gerenciam a lógica de autenticação (login/cadastro) implementada no aplicativo.
 - Funcionalidade de "Carrinho de Compras" ("Adicionar" e "Remover" produtos, com ícone interativo de "número de itens", implementada pela integração do backend com o frontend, chamadas `res.render()`), criada como um subdocumento dos objetos `user` armazenados no banco de dados MongoDB.
@@ -241,7 +241,7 @@ Para usar este projeto, clone-o usando o Git:
 - Lógica de autenticação simples, implementada com "express-session" (autenticação baseada em sessão), "bcryptjs" e "connect-mongodb-session" (armazenamento de sessões em banco de dados noSQL).
 - Representação fictícia da possível integração de aplicativos de loja com Stripe.
 - Visualização das faturas de cada pedido em arquivos .pdf, produzidos pelo backend (pacote `pdfkit`).
-- Uso de variáveis de ambiente com Heroku para ocultar informações sensíveis (API_KEYS, segredos de Json Web Token, nomes de usuário e senhas de banco de dados, etc.).
+- Uso de variáveis de ambiente com Railway para ocultar informações sensíveis (API_KEYS, segredos de Json Web Token, nomes de usuário e senhas de banco de dados, etc.).
 - Lógica de validação de formulários no frontend, com JavaScript vanilla.
 - Abordagem tradicional de envio de formulários (elemento "button" dentro de um "form"; dados de login enviados como requisição "POST" para o endpoint `/login` no backend) e validação de campos "email" e "senha" no lado do servidor (pacote `express-validator`, métodos como "isEmail()" e "isAlphanumeric()").
 - Uso de Font Awesome e Bootstrap (no rodapé da página).
